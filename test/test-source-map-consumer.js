@@ -945,6 +945,8 @@ exports["test that we can get the original sources for the sources"] =
     assert.throws(function () {
       map.sourceContentFor("three.js");
     }, Error);
+    assert.equal(map.sourceContentFor(null), null);
+    assert.equal(map.sourceContentFor(undefined), null);
 
     map.destroy();
   };
